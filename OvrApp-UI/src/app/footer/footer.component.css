@@ -1,0 +1,1705 @@
+#footer {
+  border-top-color: #2168a9;
+}
+
+#footer {
+  background-color: #000;
+  color: #fff;
+  border-top: 5px solid #2168a9;
+
+  padding: 2em;
+  font-size: 14px;
+}
+/**, *:before, *:after
+{
+  box-sizing: border-box;
+}*/
+div {
+  display: block;
+}
+
+.container {
+  /*max-width: 1150px;*/
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+#footer .logo {
+  float: left;
+}
+
+p {
+  margin: 0 0 10px;
+  /*display: block;
+-webkit-margin-before: 1em;
+-webkit-margin-after: 1em;
+-webkit-margin-start: 0px;
+-webkit-margin-end: 0px;*/
+}
+
+#footer .logo img {
+  width: 120px;
+  margin-right: 1em;
+}
+
+#footer .officials {
+  /* margin-top: 30px; */
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.utility-links {
+  font-size: 14px;
+  margin-left: -5px;
+  font-weight: normal;
+}
+
+  .utility-links li {
+      position: relative;
+      margin: 0;
+      text-indent: initial;
+  }
+
+#footer .questions {
+  margin-bottom: 5px;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+#footer .disclaimer {
+  margin-bottom: 2em;
+  font-weight: normal;
+  font-size: 13px;
+}
+
+#footer .contact-block .address, #footer .copyright {
+  font-size: 14px;
+  font-weight: normal;
+}
+
+#footer .contact-block {
+  padding-left: 20px;
+  text-align: right;
+  font-weight: bold;
+}
+
+#footer a {
+  text-decoration: underline;
+  color: #fff;
+}
+
+.utility-links li:first-child a {
+  padding-left: 0;
+}
+
+.utility-links a {
+  padding-right: 3px;
+}
+#dosbanner ul li:first-child a:before, .utility-links li:first-child:before {
+content: normal;
+}
+#dosbanner ul a:before, .utility-links li:before {
+
+content: "|";
+display: block;
+position: absolute;
+left: -5px;
+text-decoration: none;
+width: auto;
+font-size: inherit;
+line-height: inherit;
+}
+
+.lead {
+  font-size: 19px;
+}
+
+#footer .department {
+  font-size: 20px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+  #skip a
+{
+position:absolute;
+left:-10000px;
+top:auto;
+width:1px;
+height:1px;
+overflow:hidden;
+}
+
+#skip a:focus
+{
+position:static;
+width:auto;
+height:auto;
+}
+
+
+
+/* ================================= */
+
+/*===============================================================================================*/
+
+/*                                            SMALL (PHONES)                                     */
+
+/*===============================================================================================*/
+
+@media only screen and (min-width:0px) and (max-width:767px) and (orientation: portrait) {
+
+  #body-content, #body-content-es {
+   overflow-x: scroll;
+   padding-bottom: 620px;
+}
+
+   #headerTopMobile{
+    display: flex;
+    display: -ms-flexbox;
+
+    align-items: center;
+    flex-direction:column;
+    -webkit-flex-direction:column;
+    -moz-flex-direction:column;
+    /*border-bottom: 5px solid black;*/
+     background-color:black !important;
+     width:100%;
+     text-align:center;
+}
+
+   #headerContainerTopMobileOne, #headerContainerTopMobileTwo{
+        width:100%;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        text-align:center;
+        padding-bottom:10px;
+}
+
+   #headerLeftMobile{
+       padding-left:0;
+       padding-right:5px;
+   }
+
+   #headerRightMobile a{
+       color:white;
+       font-size:2vmin;
+   }
+
+   .navInfoBlack{
+       display:none;
+   }
+
+   #headerCenter {
+       width: 30%;
+       margin-top: 0;
+   }
+
+
+
+
+
+  .HeaderTitleText-PhonePortrait {
+       font-size: calc(.75vmin + .75em);
+   }
+
+   #header .container {
+       min-width: 100%;
+   }
+
+   #footer .container {
+       min-width: 100%;
+   }
+
+   #div1 div label:last-of-type{
+       max-width: 50%;
+       vertical-align: text-top;
+}
+
+   .container .btn{
+       margin-bottom:5px;
+   }
+
+   .page-content #votebtn1{
+       text-align:left !important;
+   }
+
+   .partyAffiliationLabel{
+       text-align:left;
+   }
+
+   div#footer{
+       padding:.5em;
+       height: 620px;
+       border-top: 5px solid #e9ac3b;
+   }
+
+   div#footer div.container p.officials {
+       font-size:3.5vmin;
+   }
+
+   div#footer div.container p.questions{
+       font-size:3.5vmin;
+   }
+
+   div#footer .department {
+   font-size:3.5vmin;
+}
+
+   div#footer .contact-block .address{
+   font-size:3vmin;
+}
+
+   div#footer div.footerColLeft{
+       padding-left: 5px;
+       padding-right:5px;
+   }
+
+   div#footer div.footerColRight{
+       padding-right:5px;
+       padding-left:0;
+   }
+
+   #footer p.state-seal {
+       max-width: 9.2vmin;
+       min-width: 60px;
+       margin-right: .5em;
+   }
+
+   div#footer img#state-sealImg {
+       max-width: 9.2vmin;
+       min-width: 60px;
+   }
+
+   div#footer p.officials {
+       float: left;
+       margin-top: calc(2% + 1.5vmin);
+}
+
+   div#footer p#elections-sealP {
+       width: 192px;
+       margin-left: .5em;
+       max-width: 15.5vmin;
+       min-width: 95px;
+}
+
+   div#footer img#elections-sealImg {
+       width: 192px;
+       max-width: 15.5vmin;
+       min-width: 95px;
+}
+
+  #dosLogoMobile .dosLogoPhonePortrait{
+   max-width:45vmin;
+}
+
+   div#footer div.footerColLeft{
+       width: 65%;
+       float:left;
+       padding-right:15px;
+   }
+
+   div#footer div.footerColRight{
+       float:right;
+       width: 35%;
+   }
+
+   .homeBannerDiv{
+       padding-top: 10%;
+       padding-bottom: 15%;
+       }
+
+   #mainWrapper{
+       min-height: 100%;
+       position: relative;
+       }
+}
+
+@media only screen and (min-width:0px) and (max-width:767px) and (orientation: landscape) {
+
+  #body-content, #body-content-es {
+  overflow-x: scroll;
+}
+
+   #headerTopMobile{
+    display: flex;
+    display: -ms-flexbox;
+
+    align-items: center;
+    flex-direction:column;
+    -webkit-flex-direction:column;
+    /*border-bottom: 5px solid black;*/
+     background-color:black !important;
+     width:100%;
+     text-align:center;
+}
+
+   #headerContainerTopMobileOne, #headerContainerTopMobileTwo{
+    width:100%;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    text-align:center;
+    padding-bottom:10px;
+}
+
+
+   #headerRightMobile a{
+       color:white;
+       font-size:3.6vmin;
+   }
+
+   .navInfoBlack{
+       display:none;
+   }
+
+    .HeaderTitleText-PhoneLandscape {
+       font-size: calc(1.5vmin + .75em);
+   }
+
+   #div1 div label:last-of-type {
+       max-width: 75%;
+       vertical-align: text-top;
+   }
+
+   .partyAffiliationLabel {
+       text-align: left;
+   }
+
+   #MainNavigationList {
+       text-align: left;
+   }
+
+   #footer .footerCol {
+       padding-left: 1em;
+       padding-right: 1em;
+   }
+
+   div#footer div.footerColLeft {
+       width: 70%;
+       float: left;
+       padding-left: 5px;
+       padding-right: 5px;
+   }
+
+   div#footer div.footerColRight {
+       width: 30%;
+       float: right;
+       padding-right: 5px;
+       padding-left: 0;
+   }
+
+   #footer p.state-seal {
+       max-width: 11.2vmin;
+       min-width: 83px;
+       margin-right: .5em;
+   }
+
+   div#footer img#state-sealImg {
+       max-width: 11.2vmin;
+       min-width: 83px;
+   }
+
+   div#footer p#elections-sealP {
+       width: 192px;
+       margin-left: .5em;
+       max-width: 19.5vmin;
+       min-width: 140px;
+   }
+
+   div#footer img#elections-sealImg {
+       width: 192px;
+       max-width: 19.5vmin;
+       min-width: 140px;
+   }
+
+   div#footer p.officials {
+       float: left;
+       font-size: 4.5vmin;
+       margin-top: calc(2% + 1.5vmin);
+   }
+
+   .utility-links {
+       font-size: 14px;
+       margin-left: -5px;
+       font-weight: normal;
+   }
+
+   .utility-links li {
+           position: relative;
+           margin: 0;
+           text-indent: initial;
+       }
+
+   #footer .questions {
+       margin-bottom: 5px;
+       margin-top: 20px;
+       font-weight: bold;
+       font-size: 4.5vmin;
+   }
+
+   #footer .disclaimer {
+       font-weight: normal;
+       font-size: 13px;
+   }
+
+   #footer .contact-block .address, #footer .copyright {
+       font-size: 14px;
+       font-weight: normal;
+   }
+
+   #footer .contact-block {
+       padding-left: 20px;
+       text-align: right;
+       font-weight: bold;
+   }
+
+   #footer a {
+       text-decoration: underline;
+       color: #fff;
+   }
+
+   .utility-links li:first-child a {
+       padding-left: 0;
+   }
+
+   .utility-links a {
+       padding-right: 3px;
+   }
+
+   .lead {
+       font-size: 19px;
+   }
+
+   #footer .department {
+       font-size: 20px;
+       font-weight: bold;
+       font-size: 18px;
+   }
+
+  #dosLogoMobile .dosLogoPhoneLandscape {
+       max-width: 60vmin;
+   }
+
+   .footerColLeft{
+       padding-left:0;
+       width: 65%;
+   }
+
+   .footerColRight{
+       padding-right:0;
+       width: 35%;
+   }
+
+   #body-content, #body-content-es{
+   padding-bottom: 416px;
+}
+
+   div#footer{
+       padding:.5em;
+       height: 416px;
+       border-top: 5px solid #e9ac3b;
+
+   }
+
+   .homeBannerDiv{
+   padding-top: 10%;
+   padding-bottom: 10%;
+}
+
+   #mainWrapper{
+   min-height: 100%;
+   position: relative;
+}
+
+   #headerCenter {
+       width: 50%;
+       margin-top: 0;
+   }
+
+   #headerLeft, #headerRight{
+       width:25%;
+   }
+}
+
+/*===============================================================================================*/
+
+/*                                            MEDIUM (TABLETS)                                   */
+
+/*===============================================================================================*/
+
+@media only screen and (min-width:768px) and (orientation:portrait) {
+
+  #body-content, #body-content-es {
+   overflow-x: scroll;
+    padding-bottom:390px;
+}
+
+   #headerTopMobile{
+    display: flex;
+    display: -ms-flexbox;
+
+    align-items: center;
+    flex-direction:column;
+    -webkit-flex-direction:column;
+    /*border-bottom: 5px solid black;*/
+     background-color:black !important;
+     width:100%;
+     text-align:center;
+}
+
+   #headerContainerTopMobileOne, #headerContainerTopMobileTwo{
+    width:100%;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    text-align:center;
+     padding-bottom:10px;
+}
+
+    #headerRightMobile a{
+       color:white;
+       font-size:12px;
+   }
+
+   .navInfoBlack{
+       display:none;
+   }
+
+  .HeaderTitleText-TabletPortrait {
+       font-size: calc(1vmin + .75em);
+   }
+
+   #headerCenter {
+       width: 35%;
+       margin-top: 0;
+   }
+
+   #headerLeft, #headerRight{
+       width:32.5%;
+   }
+
+   .navbar {
+       max-width: 100%;
+       padding-left:5px;
+       padding-right:5px;
+       border-radius:0;
+   }
+
+    #div1 div label:last-of-type{
+       max-width: 75%;
+       vertical-align: text-top;
+}
+
+   .partyAffiliationLabel {
+       text-align: left;
+   }
+
+   div#footer{
+       width: 100% !important;
+       padding:.5em;
+       height:390px;
+       border-top: 5px solid #e9ac3b;
+   }
+
+   div#footer div.footerColLeft{
+       float: left;
+       padding-left: 5px;
+       padding-right:5px;
+       padding-left:0;
+       width: 65%;
+   }
+
+   div#footer div.footerColRight{
+       width: 30%;
+       float: right;
+         padding-right:0;
+       width: 35%;
+   }
+
+   #footer p.state-seal {
+       max-width: 12.2vmin;
+       min-width: 73px;
+       margin-right: .5em;
+   }
+
+   div#footer img#state-sealImg {
+       max-width: 12.2vmin;
+       min-width: 73px;
+   }
+
+   div#footer p.officials {
+       float: left;
+       margin-top: calc(2% + 1.5vmin);
+}
+
+   div#footer p#elections-sealP {
+       width: 192px;
+       margin-left: .5em;
+       max-width: 19.5vmin;
+       min-width: 130px;
+}
+
+   div#footer img#elections-sealImg {
+       width: 192px;
+       max-width: 19.5vmin;
+       min-width: 130px;
+}
+
+   #dosLogoMobile .dosLogoTabletPortrait{
+   max-width:28vmin;
+}
+
+   .footerColLeft{
+       padding-left:0;
+       width: 65%;
+       float:left;
+   }
+
+   #regConExitBtnDiv, #regConExitBtnRow{
+       width:46%;
+       text-align:right;
+       float:right;
+       margin-right:15px;
+   }
+
+   #continueCol{
+       width:60%;
+       float:left;
+   }
+
+   #exitCol{
+       width:40%;
+       float:right;
+   }
+
+   .homeBannerDiv{
+   padding-top: 29%;
+   padding-bottom: 29%;
+}
+
+   #mainWrapper{
+   min-height: 100%;
+   position: relative;
+}
+
+}
+
+@media only screen and (min-width:768px) and (orientation:landscape) {
+
+  #body-content, #body-content-es {
+   overflow-x: scroll;
+   padding-bottom:390px;
+}
+
+   #headerRight a{
+   color:white !important;
+   font-size:12px;
+}
+
+  #headerRight{
+       padding-left:0;
+}
+
+   .navInfoBlackMobile{
+       display:none;
+   }
+
+   .navInfoBlack{
+       display: flex;
+       display: -ms-flexbox;
+   }
+
+   #mainWrapper{
+   min-height: 100%;
+   position: relative;
+}
+
+   #header {
+       padding-left: 2em;
+       padding-right: 2em;
+   }
+
+   #headerBanner {
+       max-width: inherit;
+   }
+
+   .navbar {
+       border-radius: 0 !important;
+       max-width: 100%;
+   }
+
+   .footerRow {
+       padding: 0 0 0 0;
+       max-width: 100%;
+   }
+
+   .HeaderTitleText-TabletLandscape {
+       font-size: calc(.75vmin + 1em);
+   }
+
+   #headerCenter {
+       line-height: 1.4285;
+       margin-top: 0;
+   }
+
+
+    #div1 div label:last-of-type{
+       max-width: 75%;
+       vertical-align: text-top;
+}
+
+   .partyAffiliationLabel {
+       text-align: left;
+   }
+
+   .col-md-4{
+       width:40%;
+   }
+
+    #dosLogoMobile .dosLogoTabletLandscape{
+   max-width:28vmin;
+}
+
+   div#footer{
+       padding:11px;
+       border-top: 5px solid #e9ac3b;
+       height:390px;
+   }
+
+   div#footer div.footerColLeft{
+       float: left;
+       padding-left: 5px;
+       padding-right:5px;
+       padding-left:0;
+       width: 65%;
+   }
+
+   div#footer div.footerColRight{
+       width: 30%;
+       float: right;
+         padding-right:0;
+       width: 35%;
+   }
+
+   .homeBannerDiv{
+   padding-top: 10%;
+   padding-bottom:10%;
+}
+
+}
+
+/*===============================================================================================*/
+
+/*                                            LARGE                                              */
+
+/*===============================================================================================*/
+
+@media only screen and (min-width:1200px) and (orientation:portrait) {
+
+  #body-content, #body-content-es {
+   overflow-x: visible;
+   padding-bottom:375px;
+}
+
+   #headerRight a{
+   color:white !important;
+   font-size:14px;
+}
+
+    #headerContainerTopMobileOne, #headerContainerTopMobileTwo{
+    width:100%;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    text-align:center;
+     padding-bottom:10px;
+}
+
+   .navInfoBlack{
+       display:none;
+   }
+
+   #mainWrapper{
+   min-height: 100%;
+   position: relative;
+}
+
+   html, body {
+       height: 100%;
+   }
+
+   body {
+       margin: 0 !important;
+       margin-left: 0;
+       /*overflow-x: hidden;*/
+       height: 100%;
+       margin-bottom: 100px;
+       clear: both;
+       max-width: 100%;
+   }
+
+   div {
+       display: block;
+   }
+
+
+   #dosLogoDesktop .dosLogoDesktopPortrait{
+   max-width:28vmin;
+}
+
+   #header {
+       padding-left: 2em;
+       padding-right: 2em;
+       background-color: #2168A9;
+       display: inline-block;
+       line-height: 0;
+       margin: 0;
+       width: 100%;
+       height: auto;
+       margin: 0px;
+       max-width: 100%;
+       vertical-align: middle;
+   }
+
+   .navbar {
+       padding-left: 2em;
+       padding-right: 2em;
+       background-color: #2168A9;
+       display: inline-block;
+       line-height: 0;
+       margin: 0;
+       width: 100%;
+       height: auto;
+       margin: 0px;
+       max-width: 100%;
+       vertical-align: middle;
+   }
+
+   #headerRow {
+       padding: 0 5% 0 5%;
+   }
+
+   .HeaderTitleText-DesktopPortrait {
+       font-size: calc(1.25vmin + 1em);
+   }
+
+   #headerCenter {
+       width: 35%;
+       margin-top: 0;
+   }
+
+   #headerLeft, #headerRight{
+       width:32.5%;
+   }
+
+   .navbar {
+       border-radius: 0 !important;
+   }
+
+   #footer {
+       background-color: #000000;
+       color: white;
+       color: #fff;
+       border-top: 5px solid #e9ac3b;
+       font-size: 14px;
+       border-bottom-color: #2168A9;
+       margin-bottom: 0;
+       padding-left: 2em;
+       padding-right: 2em;
+       width: 100%;
+       max-width: 100%;
+       overflow-x: hidden !important;
+       height:375px;
+   }
+
+   .footerColLeft{
+       padding-left:0;
+       width: 65%;
+   }
+
+   .footerColRight{
+       padding-right:0;
+       width: 35%;
+   }
+
+
+
+   .homeBannerDiv{
+   padding-top: 29%;
+   padding-bottom: 29%;
+}
+}
+
+@media only screen and (min-width:1200px) and (orientation:landscape) {
+
+  #body-content, #body-content-es {
+   overflow-x: visible;
+   padding-bottom:400px;
+}
+
+   #headerRight a{
+   color:white !important;
+   font-size:14px;
+}
+
+   .navInfoBlackMobile{
+       display:none;
+   }
+
+   .navInfoBlack{
+       display: flex;
+       display: -ms-flexbox;
+   }
+
+   #mainWrapper{
+   min-height: 100%;
+   position: relative;
+}
+
+   .container {
+       /*padding-left: 0;
+   padding-right: 0;*/
+       max-width: 1150px !important;
+   }
+
+   #header {
+       max-width: 100% !important;
+       width: 100% !important;
+       /*overflow-x: hidden;*/
+   }
+
+   #header .container {
+           padding-left: 0;
+           padding-right: 0;
+       }
+
+   body {
+       width: 100% !important;
+   }
+
+   html, body {
+       height: 100%;
+   }
+
+   body {
+       margin: 0 !important;
+       margin-left: 0;
+       /*overflow-x: hidden;*/
+       height: 100%;
+       margin-bottom: 100px;
+       clear: both;
+       width: 100%;
+   }
+
+
+
+   div {
+       display: block;
+   }
+
+
+
+   #PartyAffiliation {
+       /*max-width: 340px !important;*/
+       max-width: 400px !important;
+   }
+
+   .center-content {
+       margin-top: auto;
+       position: relative;
+   }
+
+   .form-group .col-lg-10 {
+       padding-left: 0;
+   }
+
+   .partyAffiliationLabel {
+       text-align: right;
+   }
+
+  #dosLogoDesktop .dosLogoDesktopLandscape{
+   max-width:28vmin;
+}
+
+   #headerRight {
+       padding-left: 0;
+       padding-right: 0;
+   }
+
+   #headerCenter {
+       padding-left: 0px !important;
+       padding-right: 0px !important;
+       margin-top: 0;
+   }
+
+   #MainNavigationList {
+       text-align: left;
+   }
+
+   #headerLeft {
+       padding-left: 0;
+   }
+
+   #header {
+       background-color: #2168A9;
+       display: inline-block;
+       width: 100%;
+       height: auto;
+       margin: 0px;
+       max-width: 100%;
+       vertical-align: middle;
+       padding-left: 2em;
+       padding-right: 2em;
+   }
+
+   .navbar {
+       padding-left: 2em;
+       padding-right: 2em;
+       background-color: #2168A9;
+       display: inline-block;
+       width: 100%;
+       height: auto;
+       margin: 0px;
+       max-width: 100%;
+       vertical-align: middle;
+   }
+
+   #headerRow {
+       margin-right: auto;
+       margin-left: auto;
+       margin: 0px;
+   }
+
+
+   .HeaderTitleText-DesktopLandscape {
+       font-size: calc(.75vmin + 1em);
+   }
+
+   .navbar {
+       border-radius: 0 !important;
+   }
+
+   #MainNavigationList li {
+       padding-left: 15px;
+   }
+
+   #nav ul li a {
+       padding-left: 0;
+   }
+
+   div#footer {
+       background-color: #000000;
+       color: white;
+       color: #fff;
+       border-top: 5px solid #e9ac3b;
+       border-bottom-color: #2168A9;
+       margin-bottom: 0;
+       padding: 1em;
+       padding-left:0;
+       padding-right:0;
+       width: 100%;
+       max-width: 100%;
+       overflow-x: hidden !important;
+       height:400px;
+   }
+
+   .footerColLeft{
+       padding-left:0;
+       width: 65%;
+   }
+
+   .footerColRight{
+       padding-right:0;
+       width: 35%;
+   }
+
+   p {
+       margin: 0 0 10px;
+   }
+
+   #footer .officials {
+       margin-top: 30px;
+       font-size: 18px;
+       font-weight: bold;
+   }
+
+   .utility-links {
+       font-size: 14px;
+       margin-left: -5px;
+       font-weight: normal;
+   }
+
+   .utility-links li {
+           position: relative;
+           margin: 0;
+           text-indent: initial;
+       }
+
+   #footer .questions {
+       margin-bottom: 5px;
+       margin-top: 20px;
+       font-weight: bold;
+   }
+
+   #footer .disclaimer {
+       font-weight: normal;
+       font-size: 13px;
+   }
+
+   #footer .contact-block .address, #footer .copyright {
+       font-size: 14px;
+       font-weight: normal;
+   }
+
+   #footer .contact-block {
+       padding-left: 20px;
+       text-align: right;
+       font-weight: bold;
+   }
+
+   #footer a {
+       text-decoration: underline;
+       color: #fff;
+   }
+
+   .utility-links li:first-child a {
+       padding-left: 0;
+   }
+
+   .utility-links a {
+       padding-right: 3px;
+   }
+
+   .lead {
+       font-size: 19px;
+   }
+
+   #footer .department {
+       font-size: 20px;
+       font-weight: bold;
+       font-size: 18px;
+   }
+
+   span.headerLinkHelp, span.headerLinkFAQ{
+   padding-right:16px;
+}
+
+}
+
+
+@media only screen and (min-width:1367px) and (orientation:portrait) {
+
+  #body-content, #body-content-es {
+   overflow-x: visible;
+   padding-bottom:400px;
+}
+
+   #headerRight a{
+   color:white !important;
+   font-size:14px;
+}
+
+   #headerContainerTopMobileOne, #headerContainerTopMobileTwo{
+    width:100%;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    text-align:center;
+     padding-bottom:10px;
+}
+
+   .navInfoBlack{
+       display:none;
+   }
+
+   #mainWrapper{
+   min-height: 100%;
+   position: relative;
+}
+
+   .HeaderTitleText-DesktopXl-Portrait {
+       font-size: calc(.75vmin + 1em);
+   }
+
+   .partyAffiliationLabel {
+       text-align: right;
+   }
+
+   #dosLogoDesktop .dosLogoDesktopXlPortrait{
+   max-width:28vmin;
+}
+
+   .footerColLeft{
+   padding-left:0;
+   width: 65%;
+}
+
+   .footerColRight{
+       padding-right:0;
+       width: 35%;
+   }
+
+   #footer{
+       height:400px;
+   }
+
+    .homeBannerDiv{
+   padding-top: 29%;
+   padding-bottom: 29%;
+}
+}
+
+@media only screen and (min-width:1367px) and (orientation:landscape) {
+
+  #body-content, #body-content-es {
+   overflow-x: visible;
+}
+
+   #headerRight a{
+   color:white !important;
+   font-size:14px;
+}
+
+   .navInfoBlackMobile{
+       display:none;
+   }
+
+   .navInfoBlack{
+       display: flex;
+       display: -ms-flexbox;
+   }
+
+   #mainWrapper {
+       min-height: 100%;
+       position: relative;
+   }
+
+   #headerCenter {
+       margin-top: 0;
+   }
+
+   .HeaderTitleText-DesktopXl-Landscape {
+       font-size: calc(.75vmin + 1em);
+   }
+
+
+
+   .partyAffiliationLabel {
+       text-align: right;
+   }
+
+   #dosLogoDesktop .dosLogoDesktopXlLandscape{
+   max-width:28vmin;
+}
+
+   .footerColLeft{
+   padding-left:0;
+   width: 65%;
+}
+
+   .footerColRight{
+   padding-right:0;
+   width: 35%;
+}
+
+   #body-content, #body-content-es{
+   padding-bottom:400px;
+}
+
+   div#footer{
+       border-top: 5px solid #e9ac3b;
+       height:400px;
+   }
+
+}
+
+/*===============================================================================================*/
+
+/*                                            Global/Other                                       */
+
+/*===============================================================================================*/
+
+#mainNavCtnr {
+   width: 100%;
+}
+
+#MainNavigationList {
+   text-align: left;
+}
+
+.form-group .col-lg-10 {
+   padding-left: 0;
+}
+
+.reviewTable {
+   padding-left: 0;
+   padding-right: 0;
+}
+
+#eligibilityRow {
+   margin-left: 0 !important;
+   margin-right: 0 !important;
+   padding-left: 0 !important;
+   padding-right: 0 !important;
+}
+
+div#eligibilityPanel {
+   padding-left: 0;
+   padding-right: 0;
+}
+
+.vote-app {
+   padding-top: 20px;
+}
+
+.appFormBtnDiv {
+   padding-bottom: 20px;
+}
+
+#footer{
+   padding:14px;
+}
+
+#progress6{
+   pointer-events: none !important;
+}
+
+.btn-success1, btn-arrow-right{
+   pointer-events: none !important;
+}
+
+.btn-primary2{
+   pointer-events: none !important;
+}
+
+#headerBannerA {
+   width: 100%;
+   /*width: 30%;*/
+   max-width: 100%;
+}
+
+#headerBannerB {
+   width: 100%;
+   /*width: 30%;*/
+   max-width: 100%;
+}
+
+#homeBanner {
+   max-width: 100%;
+}
+
+#homeBanner:hover {
+       opacity: .7;
+   }
+
+
+
+#headerBannerD {
+   width: 100%;
+   /*width: 30%;*/
+   max-width:  100%;
+}
+
+#footer p.officials {
+   float: left;
+   margin-top: calc(2% + 1.5vmin);
+}
+
+#footer #elections-sealImg {
+   width: 192px;
+   margin-left: .5em;
+   max-width: 19.5vmin;
+   min-width: 150px;
+}
+
+#footer #elections-sealP {
+   width: 192px;
+   margin-left: .5em;
+   max-width: 19.5vmin;
+   min-width: 150px;
+   float: none;
+   display: inline-block;
+}
+
+#footer #state-sealImg {
+   max-width: 12.2vmin;
+   min-width: 93px;
+}
+
+#footer .state-seal {
+   max-width: 12.2vmin;
+   min-width: 93px;
+   margin-right: .5em;
+}
+
+
+
+
+#header{
+    display: flex;
+    display: -ms-flexbox;
+
+    align-items: center;
+    flex-direction:row;
+    -webkit-flex-direction:row;
+    /*border-bottom: 5px solid black;*/
+     background-color:#2168A9 !important;
+}
+
+#headerTop{
+    display: flex;
+    display: -ms-flexbox;
+
+    align-items: center;
+    flex-direction:row;
+    -webkit-flex-direction:row;
+    /*border-bottom: 5px solid black;*/
+     background-color:black !important;
+     width:100%;
+}
+
+#headerContainer{
+    display: flex;
+    display: -ms-flexbox;
+
+    align-items:center;
+    flex-direction:row;
+    -webkit-flex-direction:row;
+    width:100%;
+    /*flex-wrap:wrap;*/
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+#headerContainerTop{
+   display: flex;
+   display: -ms-flexbox;
+
+    align-items:center;
+    flex-direction:row;
+    -webkit-flex-direction:row;
+    width:100%;
+    /*flex-wrap:wrap;*/
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.navInfoBlackMobile {
+   border-bottom: 5px solid #e9ac3b;
+}
+
+.navInfoBlack{
+
+    align-items: center;
+    flex-direction:row;
+    -webkit-flex-direction:row;
+    width:100%;
+    padding: 10px 0 10px 0;
+    border-bottom: 5px solid #e9ac3b;
+    background-color:black !important;
+}
+
+#MainNavigationListRight{
+   text-align:right;
+}
+
+#mainNavCtnr{
+    display:none;
+}
+
+#mainNavCtnrB{
+     width:100%;
+    display:inline-block;
+    margin:0;
+}
+
+#headerLeft{
+   padding-left: 0 !important;
+   padding-right: 0 !important;
+   width: 30%;
+}
+
+#headerCenter {
+   padding-left: 0 !important;
+   padding-right: 0 !important;
+   width:40%;
+}
+
+#headerRightMobile{
+  padding-top:.1%;
+  padding-right: 0;
+  padding-left: 0;
+  text-align: right;
+}
+
+#headerRight{
+  padding-right: 0;
+  text-align: right;
+   width: 30%;
+}
+
+#headerRight .headerLinkHelp, #headerRight .headerLinkFAQ{
+       padding-right:20px;
+   }
+
+#headerRightMobile .headerLinkHelp, #headerRightMobile .headerLinkFAQ{
+       padding-right:2vmin;
+   }
+
+#headerRight a{
+   color:white !important;
+   text-decoration:underline;
+}
+
+#headerRightMobile a{
+   text-decoration:underline;
+}
+
+#dosLogoMobile, #dosLogoDesktop{
+   background-color: white;
+   /*margin-top: 2%;*/
+}
+
+.receiptContainer{
+   padding-bottom:30px;
+}
+
+#mainCont{
+   padding-bottom:30px;
+}
+
+.navbar{
+   border:none;
+}
+
+#headerRow{
+   padding-left:0;
+   padding-right:0;
+}
+
+body{
+   margin:0;
+ padding:0;
+ height:100%;
+}
+
+#mainWrapperhome{
+   min-height: 100%;
+   position: relative;
+   background-color:white;
+}
+
+.homeBannerDiv {
+   position:relative;
+   flex-direction:column;
+   -webkit-flex-direction:column;
+ display: flex;
+   display: -webkit-flex;
+   display: -ms-flexbox;
+   align-items: center;
+   align-content: center;
+   justify-content: center;
+}
+
+#footer{
+   width:100%;
+ position:absolute;
+ bottom:0;
+ left:0;
+}
+
+#footer .container{
+   height:auto;
+}
+
+#body-content-es{
+padding-left:0;
+padding-right:0;
+}
+
+@media print {
+   #header{
+       display:none;
+   }
+   .navInfoBlack{
+       display:none;
+   }
+
+   .navInfoBlackMobile{
+       display:none;
+   }
+}
+
+@media only screen and (orientation: portrait){
+   .authMainDiv{
+       padding-top:15%;
+   padding-bottom:25%;
+}
+}
+
+@media only screen and (orientation: landscape){
+   .authMainDiv{
+       padding-top:5%;
+   padding-bottom:15%;
+}
+}
+
+/* ============================== */
+
+
+#footer {
+  bottom: 0;
+  color: #707070;
+  height: 2em;
+  left: 0;
+  position: relative;
+  font-size: small;
+  width:100%;
+}
+
+
+/* ============================== */
+
+/* * {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+#wrap {
+  min-height: 100%;
+}
+
+#main {
+  overflow: auto;
+  padding-bottom: 180px;
+
+}
+
+#footer {
+  position: relative;
+  margin-top: -180px;
+
+  height: 180px;
+  clear: both;
+  background-color: red;
+}
+
+
+
+body:before {
+  content: "";
+  height: 100%;
+  float: left;
+  width: 0;
+  margin-top: -32767px;
+
+} */

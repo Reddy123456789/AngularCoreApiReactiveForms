@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+table {
+  border-collapse: collapse;
+}
+table, th, td {
+  border: 1px solid black;
+}
+.error {
+  color: red;
+}
+.success {
+  color: green;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

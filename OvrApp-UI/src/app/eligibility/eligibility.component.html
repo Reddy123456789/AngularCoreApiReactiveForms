@@ -1,0 +1,40 @@
+<p>
+  eligibility works!
+</p>
+<h3>Create Article</h3>
+<p *ngIf="dataSaved && eligibilityForm.pristine" ngClass = "success">
+	Article created successfully.
+</p>
+<form [formGroup]="eligibilityForm" (ngSubmit)="onFormSubmit()">
+  <table>
+	 <tr>
+	   <td>DLNumber: </td>
+	   <td>
+		<input formControlName="DLNumber">
+	   </td>
+	 </tr>
+	 <tr>
+	   <td>LastSSN: </td>
+	   <td>
+	      <input formControlName="LastSSN">
+	   </td>
+	 </tr>
+	 <tr>
+	   <td>LastName: </td>
+	   <td>
+	      <input formControlName="LastName">
+	   </td>
+	 </tr>
+	 <tr>
+	   <td colspan="2">
+        <!-- <button [disabled]="eligibilityForm.invalid">Submit</button> -->
+        <button>Submit</button>
+	   </td>
+	 </tr>
+  </table>
+</form>
+<h3>Eligibility Details</h3>
+<p *ngFor="let eligibility of allEligibility$ | async">
+	{{eligibility.DLNumber}} | {{eligibility.LastName}} |
+  {{eligibility.LastSSN}}
+</p>
