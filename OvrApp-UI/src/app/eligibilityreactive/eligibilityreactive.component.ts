@@ -68,13 +68,14 @@ export class EligibilityreactiveComponent implements OnInit {
   ngOnInit() {
 
     this.eligibilityFrm = this.fb.group({
+      id: [''],
       IsCitizen: ['', Validators.required],
       IsFelon: ['', Validators.required],
       IsMentalIncomp: ['', Validators.required],
 
-      NewRegistration: ['', Validators.required],
-      RecordUpdate: ['', Validators.required],
-      RequesttoReplace: ['', Validators.required],
+      NewRegistration: [''],
+      RecordUpdate: [''],
+      RequesttoReplace: [''],
     //  DLNumber: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(10), Validators.pattern(this.unamePattern)]],
      DLNumber: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(13)]],
      LastSSN: ['', [Validators.required, Validators.maxLength(4)]],
@@ -120,8 +121,10 @@ export class EligibilityreactiveComponent implements OnInit {
 
       this.service.addEligibility(contactData).subscribe(
         (data: IEligibility) => {
-          console.log(contactData);
+         // console.log(contactData);
+          this.service.sharedEligibility = contactData;
           // this.router.navigateByUrl('/getlist');
+           this.router.navigateByUrl('/review');
         }
       );
   }

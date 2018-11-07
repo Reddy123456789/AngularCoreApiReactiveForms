@@ -15,6 +15,8 @@ import { HeaderComponent } from './header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { GetlistComponent } from './getlist/getlist.component';
 import { FooterComponent } from './footer/footer.component';
+import { RevieweligibilityComponent } from './revieweligibility/revieweligibility.component';
+import { RdFormComponent } from './RdForm/RdForm.component';
 
 @NgModule({
    declarations: [
@@ -23,7 +25,9 @@ import { FooterComponent } from './footer/footer.component';
       EligibilityreactiveComponent,
       HeaderComponent,
       GetlistComponent,
-      FooterComponent
+      FooterComponent,
+      RevieweligibilityComponent,
+      RdFormComponent
    ],
    imports: [
       BrowserModule,

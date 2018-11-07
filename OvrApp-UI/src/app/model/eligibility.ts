@@ -1,4 +1,5 @@
 export interface IEligibility {
+  id: number;
   IsCitizen: string;
   IsFelon: string;
   IsMentalIncomp: string;

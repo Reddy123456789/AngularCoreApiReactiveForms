@@ -15,11 +15,11 @@ export class GetlistComponent implements OnInit {
   constructor(private service: EligibilityService) { }
 
   ngOnInit() {
-    this.getCustomers();
-   // this.getCustomer();
+    this.getEligibilitys();
+    this.getEligibility();
   }
 
-  getCustomers() {
+  getEligibilitys() {
 
     this.service.getAllEligibility('http://localhost:5000/api/customer/getAllCustomers').subscribe( response => {
       this.customers = response;
@@ -31,16 +31,16 @@ export class GetlistComponent implements OnInit {
     );
      }
 
-  //    getCustomer() {
-  //     this.service.getOneEligibility(45).subscribe( response => {
-  //     // this.service.getOneCustomer(this.passid).subscribe( response => {
-  //       this.getcustomer = response;
-  //       console.log(this.getcustomer);
-  //    // this.savecustomerform.reset();
-  //    }, error => {
-  //      console.log(error);
-  //    }
-  //  );
-  //  }
+     getEligibility() {
+      this.service.getOneEligibility(54).subscribe( response => {
+      // this.service.getOneCustomer(this.passid).subscribe( response => {
+        this.getcustomer = response;
+        console.log(this.getcustomer);
+     // this.savecustomerform.reset();
+     }, error => {
+       console.log(error);
+     }
+   );
+   }
 
 }

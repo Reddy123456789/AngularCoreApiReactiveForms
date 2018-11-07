@@ -14,6 +14,9 @@ const httpOptions = {
 @Injectable()
 export class EligibilityService {
 
+  public sharedEligibility = {};
+
+
 constructor(private http: HttpClient) { }
 
 // getAllEligibility(url: string): Observable<IEligibility[]> {
@@ -26,7 +29,7 @@ constructor(private http: HttpClient) { }
 
 // Get Customer By Id
 getOneEligibility(id: number): Observable<IEligibility[]> {
-  const newurl = `${'http://localhost:5000/api/ovrapp/getCustomer'}?id=${id}`;
+  const newurl = `${'http://localhost:5000/api/ovrapp/getEligibility'}?id=${id}`;
 // const newurl = `${'http://localhost:5000/api/customer/getCustomer'}?id=${44}`;
  console.log(newurl);
  return this.http.get<IEligibility[]>(newurl)

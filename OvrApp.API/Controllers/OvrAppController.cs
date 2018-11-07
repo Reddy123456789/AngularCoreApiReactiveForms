@@ -26,6 +26,19 @@ namespace OvrApp.API.Controllers
             return _context.Eligibilitys.ToList();
         }
 
+        [HttpGet]
+        [Route("getEligibility")]
+        public IActionResult GetById(long id)
+        {
+            // filter contact records by contact id
+            var item = _context.Eligibilitys.FirstOrDefault(t => t.Id == id);
+            if (item == null)
+            {
+                return NotFound();
+            }
+            return new ObjectResult(item);
+        }
+
         [HttpPost]
         [Route("addEligibility")]
         public IActionResult CreateEligibility([FromBody] Eligibility item)

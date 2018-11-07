@@ -1,0 +1,131 @@
+<p>revieweligibility works!</p>
+<!-- <div class="container">
+  <table id="Customer" class="table table-striped table-bordered">
+    <thead>
+      <tr>
+        <td>DL Number</td>
+        <td>Date of Birth</td>
+        <td>First Name</td>
+        <td>Issue Date</td>
+        <td>Last Name</td>
+        <td>Last 4 SSN</td>
+        <td>Middle Name</td>
+      </tr>
+    </thead>
+    <tbody *ngIf="getcustomer != null">
+      <tr>
+        <td>{{ getcustomer.DLNumber }}</td>
+        <td>
+          {{ getcustomer.Dob | date }}
+        </td>
+        <td>{{ getcustomer.FirstName }}</td>
+        <td>{{ getcustomer.IssueDate }}</td>
+        <td>{{ getcustomer.LastName }}</td>
+        <td>{{ getcustomer.LastSSN }}</td>
+        <td>{{ getcustomer.MiddleName }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div> -->
+
+<div class="container">
+  <div class="panel panel-default col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <div class="panel-body">
+      <div style="text-align:center;">
+        <h4><strong>Review Page</strong></h4>
+      </div>
+
+      <h3>Personal Identification Information</h3>
+      <hr style="border-color:black;" />
+      <fieldset disabled>
+        <div class="row">
+          <table class="table table-bordered" role="presentation">
+            <tbody>
+              <tr>
+                <td
+                  colspan="2"
+                  style="border: 0px solid #ffffff; font-weight:bold"
+                >
+                  <span class="glyphicon glyphicon-check"
+                    ></span
+                  > NewRegistration
+                </td>
+              </tr>
+              <tr>
+                <td
+                  colspan="2"
+                  style="border: 0px solid #ffffff; font-weight:bold"
+                >
+                  <span class="glyphicon glyphicon-check"
+                    ></span
+                  >
+                   RecordUpdateOrChange
+                </td>
+              </tr>
+              <tr>
+                <td
+                  colspan="2"
+                  style="border: 0px solid #ffffff; font-weight:bold"
+                >
+                  <span class="glyphicon glyphicon-check"
+                    ></span
+                  >
+                   RequesttoReplace
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class=".col-xs-6 .col-sm-4">
+                    <b>Florida DL or Florida ID card number: </b> {{ getcustomer.DLNumber }}
+                  </div>
+                </td>
+
+                <td>
+                  <div class=".col-xs-6 .col-sm-4">
+                    <b>Florida DL Issued Date: </b> {{ getcustomer.IssueDate }}
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class=".col-xs-6 .col-sm-4">
+                    <b>Last 4 digits of your Social Security Number: </b> {{ getcustomer.LastSSN }}
+                  </div>
+                </td>
+
+                <td>
+                  <div class=".col-xs-6 .col-sm-4"><b>Date of Birth:</b> {{ getcustomer.Dob | date }}</div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class=".col-xs-6 .col-sm-4"><b>LastName:</b> {{ getcustomer.LastName }}</div>
+                </td>
+                <td>
+                  <div class=".col-xs-6 .col-sm-4"><b>FirstName:</b> {{ getcustomer.FirstName }}</div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class=".col-xs-6 .col-sm-4"><b>MiddleName:</b> {{ getcustomer.MiddleName }}</div>
+                </td>
+                <td>
+                  <div class=".col-xs-6 .col-sm-4"><b>Suffix: </b></div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </fieldset>
+
+      <div class="pull-right">
+        <button
+          class="btn btn-primary btn-ok"
+          data-toggle="modal" (click)="navigatetoRd()"
+        >
+          Continue
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

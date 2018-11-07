@@ -4,7 +4,7 @@ namespace OvrApp.API.Models
 {
     public class Eligibility
     {
-        public int Id { get; set; }        
+        public int? Id { get; set; }        
         public string IsCitizen { get; set; }        
         public string IsFelon { get; set; }        
         public string IsMentalIncomp { get; set; }
