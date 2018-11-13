@@ -29,4 +29,5 @@ public static mentalIncomps = [{
       id: 1
   }];
   public static technologies = ['JavaScript', 'SharePoint', 'C#'];
+  public static partys = ['1', '2', '3'];
 }

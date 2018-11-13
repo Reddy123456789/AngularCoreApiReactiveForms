@@ -1,3 +1,4 @@
+import { CommonSetting } from './../model/eligibility';
 import { Global } from './../shared/Global';
 import { EligibilityService } from './../services/eligibility.service';
 import { Component, OnInit } from '@angular/core';
@@ -15,6 +16,15 @@ export class EligibilityreactiveComponent implements OnInit {
   eligibilityFrm: FormGroup;
   citizens = [];
 
+  isNewRegistration = false;
+  isNewrecordUpdate = false;
+  isNewRequesttoReplace = false;
+  RecordUpdate = false;
+  RequesttoReplace = false;
+
+  RecaptaSiteKey: string = CommonSetting.RecaptaSiteKey;
+  isRecaptaValid = false;
+
   formErrors = {
     'IsCitizen': '',
     'IsFelon': '',
@@ -25,6 +35,7 @@ export class EligibilityreactiveComponent implements OnInit {
     'FirstName': '',
     'MiddleName': '',
     'Dob': '',
+    'recaptchaReactive': ''
     // 'proficiency': ''
   };
   // This object contains all the validation messages for this form
@@ -58,6 +69,9 @@ export class EligibilityreactiveComponent implements OnInit {
     },
     'Dob': {
       'required': 'Dob is required.'
+    },
+    'recaptchaReactive': {
+      'required': 'recaptchaReactive is required.'
     }
   };
 
@@ -66,7 +80,6 @@ export class EligibilityreactiveComponent implements OnInit {
   public DLPattern = {'A': { pattern: new RegExp('^[A-Za-z]$')}, '0': { pattern: new RegExp('^[0-9]$')} };
   public SSNPattern = {'0': { pattern: new RegExp('^[0-9]$')} };
   ngOnInit() {
-
     this.eligibilityFrm = this.fb.group({
       id: [''],
       IsCitizen: ['', Validators.required],
@@ -84,12 +97,15 @@ export class EligibilityreactiveComponent implements OnInit {
       MiddleName: ['', Validators.required],
      // Dob: ['']
       Dob: ['', Validators.required],
+      recaptchaReactive: ['', Validators.required]
     });
     this.citizens = Global.citizens;
 
     this.eligibilityFrm.valueChanges.subscribe((data) => {
       this.logValidationErrors(this.eligibilityFrm);
     });
+
+
   }
   logValidationErrors(group: FormGroup = this.eligibilityFrm): void {
     // console.log(Object.keys(group.controls));
@@ -134,8 +150,38 @@ export class EligibilityreactiveComponent implements OnInit {
      console.log(customer.Dob);
      return customer;
    }
+
+   setNewRegistrationStatus() {
+    // this.isNewRegistration = this.eligibilityFrm.get('NewRegistration').value;
+
+    if (this.eligibilityFrm.get('NewRegistration').value === true) {
+      this.eligibilityFrm.get('RequesttoReplace').setValue(false);
+      this.eligibilityFrm.get('RecordUpdate').setValue(false);
+      this.isNewrecordUpdate = true;
+    } else {
+      this.isNewrecordUpdate = false;
+    }
+  }
+
+  setNewRegistrationStatusFalse() {
+    this.RecordUpdate = this.eligibilityFrm.get('RecordUpdate').value;
+    this.RequesttoReplace = this.eligibilityFrm.get('RequesttoReplace').value;
+    if (this.RecordUpdate === true || this.RequesttoReplace === true) {
+      this.isNewRegistration = true;
+      this.eligibilityFrm.get('NewRegistration').setValue(false);
+    } else {
+      this.isNewRegistration = false;
+    }
+  }
    setDefaultValues() {
      this.eligibilityFrm.patchValue({ NewRegistration: false, RecordUpdate: false, RequesttoReplace: false });
    // this.eligibilityFrm.setValue({ NewRegistration: false, RecordUpdate: false, RequesttoReplace: false });
  }
+ resolvedCaptcha(captchaResponse: string) {
+  console.log(`Resolved captcha with response ${captchaResponse}:`);
+
+  if (captchaResponse != null) {
+    this.isRecaptaValid = true;
+  }
+}
 }

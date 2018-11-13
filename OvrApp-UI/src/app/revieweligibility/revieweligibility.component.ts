@@ -16,7 +16,7 @@ export class RevieweligibilityComponent implements OnInit {
     const contactData = this.service.sharedEligibility;
    // console.log(contactData);
     this.getcustomer = contactData;
-    console.log(this.getcustomer);
+    console.log(this.getcustomer, this.getcustomer.id);
   }
   navigatetoRd() {
     this.router.navigateByUrl('/rdform');

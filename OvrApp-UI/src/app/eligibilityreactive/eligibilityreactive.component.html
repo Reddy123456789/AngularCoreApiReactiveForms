@@ -1,25 +1,19 @@
-<!-- <p>
-   eligibilityreactive works!
-</p> -->
+<div class="container"  style="padding-top: 260px;">
+  <div class="alert alert-info" role="alert" >
+      <strong>Attention!</strong> This site requires cookies to be enabled. Cookies are necessary for full
+    functionality and allow for the best user experience.
+    Cookie control is handled through your individual browser. Refer to your browser or device help material
+    to adjust cookie usage.
+    </div>
+  </div>
 
-<div class="container" style="padding-top: 260px;">
+<div class="container">
   <form [formGroup]="eligibilityFrm" class="form-horizontal" (ngSubmit)="onSubmit(eligibilityFrm)">
     <div class="panel panel-primary">
       <div class="panel-heading">
         <h3 class="panel-title">Register Voter</h3>
       </div>
       <div class="panel-body">
-        <!-- <div class="form-group">
-          <mat-radio-group class="contact-radio-group" formControlName="IsCitizen" >
-              <label class="col-md-3 control-label" for="IsCitizen">Are you a USA citizen?</label>
-              <mat-radio-button class="contact-radio-button" *ngFor="let citizen of citizens" [value]="citizen.id">
-                {{ citizen.name }}
-              </mat-radio-button>
-            </mat-radio-group>
-            <mat-error *ngIf="formErrors.IsCitizen">
-              {{ formErrors.IsCitizen }}
-            </mat-error>
-            </div> -->
 
         <div class="form-group" [ngClass]="{'has-error' : formErrors.IsCitizen}">
           <label class="col-md-3 control-label" for="IsCitizen">Are you a USA citizen?</label>
@@ -63,20 +57,21 @@
             </span>
           </div>
         </div>
-        <div class="form-group" id="div1">
+        <div class="form-group">
           <div class="col-md-1"></div>
             <div class="col-md-11">
                 <label>
-                  <input name="NewRegistration" id="NewRegistration" type="checkbox" formControlName="NewRegistration"> New Registration
+                  <input name="NewRegistration" id="NewRegistration" type="checkbox" formControlName="NewRegistration"
+                  [attr.disabled]="isNewRegistration == true ? true : null" (change)="setNewRegistrationStatus()"> New Registration
                 </label>
               </div>
           </div>
-          <div id="div2">
           <div class="form-group" >
               <div class="col-md-1"></div>
                 <div class="col-md-11">
                     <label>
-                      <input name="RecordUpdate" id="RecordUpdate" type="checkbox" formControlName="RecordUpdate"> Record Update/Change (e.g., Address, Party Affiliation, Name, Signature)
+                      <input name="RecordUpdate" id="RecordUpdate" type="checkbox" formControlName="RecordUpdate"
+                      [attr.disabled]="isNewrecordUpdate == true ? true : null" (change)="setNewRegistrationStatusFalse()"> Record Update/Change (e.g., Address, Party Affiliation, Name, Signature)
                     </label>
                   </div>
               </div>
@@ -84,11 +79,12 @@
                   <div class="col-md-1"></div>
                     <div class="col-md-11">
                         <label>
-                          <input name="RequesttoReplace" id="RequesttoReplace" type="checkbox" formControlName="RequesttoReplace"> Request to Replace Voter Information Card
+                          <input name="RequesttoReplace" id="RequesttoReplace" type="checkbox" formControlName="RequesttoReplace"
+                          [attr.disabled]="isNewrecordUpdate == true ? true : null" (change)="setNewRegistrationStatusFalse()"> Request to Replace Voter Information Card
                         </label>
                       </div>
                   </div>
-                </div>
+
         <div class="form-group" [ngClass]="{'has-error' : formErrors.DLNumber}">
           <label class="col-sm-2 control-label" for="DLNumber">DL Number</label>
           <div class="col-sm-8">
@@ -99,20 +95,6 @@
             </span>
           </div>
         </div>
-
-        <!-- <div [hidden]="!eligibilityFrm.controls.LastSSN.valid">
-            <div class="form-group" [ngClass]="{'has-error' : formErrors.LastName}">
-                <label class="col-sm-2 control-label" for="LastName">Last Name</label>
-                <div class="col-sm-8">
-                  <input id="LastName" type="text" class="form-control" formControlName="LastName" (blur)="logValidationErrors()">
-                  <span class="help-block" *ngIf="formErrors.LastName">
-                    {{formErrors.LastName}}
-                  </span>
-                </div>
-              </div>
-          Hello from div, Last SSN is Valid
-        </div> -->
-
         <div class="form-group" [ngClass]="{'has-error' : formErrors.LastSSN}">
           <label class="col-sm-2 control-label" for="LastSSN">Last SSN</label>
           <div class="col-sm-8">
@@ -152,61 +134,24 @@
           </div>
         </div>
 
-        <div class="form-group">
+         <div class="form-group">
           <label class="col-sm-2 control-label" for="Dob">Date of Birth </label>
           <mat-form-field appearance="outline" class="col-sm-8">
             <input matInput [matDatepicker]="picker" placeholder="Date of Birth" formControlName="Dob">
             <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
             <mat-datepicker #picker></mat-datepicker>
-            <!-- <mat-error *ngIf="formErrors.Dob ">
-                {{ formErrors.Dob }}
-              </mat-error> -->
             <mat-error style="color:#a94442; font-size: 14px;">
               Date of birth is required
             </mat-error>
           </mat-form-field>
         </div>
+           <div class="form-group" id="div4">
+              <div class="col-md-1"></div>
+              <div class="col-md-11">
+                  <re-captcha formControlName="recaptchaReactive" (resolved)="resolvedCaptcha($event)" [siteKey]="RecaptaSiteKey"></re-captcha>
 
-
-
-
-        <!-- <div class="form-group" [ngClass]="{'has-error' : formErrors.Dob}">
-              <label class="col-sm-2 control-label" for="Dob">Date of Birth </label>
-              <div class="col-sm-8">
-          <div class="input-group date" data-provide="datepicker">
-            <input id="Dob" bsDatepicker class="form-control" [bsConfig]="{ dateInputFormat: 'YYYY-MM-DD' }">
-            <input id="Dob" bsDatepicker class="form-control">
-            <div class="input-group-addon">
-                <span class="glyphicon glyphicon-th"></span>
-            </div>
-            <span class="help-block" *ngIf="formErrors.Dob">
-                {{formErrors.Dob}}
-                </span>
-          </div>
-        </div>
-        </div> -->
-
-
-        <!-- <div class="form-group" [ngClass]="{'has-error' : formErrors.proficiency}">
-              <label class="col-md-2 control-label">Proficiency</label>
-              <div class="col-md-8">
-                <label class="radio-inline">
-                  <input id="proficiency" type="radio" value="beginner"
-                         formControlName="proficiency" (blur)="logValidationErrors()">Beginner
-                </label>
-                <label class="radio-inline">
-                  <input id="proficiency" type="radio" value="intermediate"
-                         formControlName="proficiency" (blur)="logValidationErrors()">Intermediate
-                </label>
-                <label class="radio-inline">
-                  <input id="proficiency" type="radio" value="advanced"
-                         formControlName="proficiency" (blur)="logValidationErrors()">Advanced
-                </label>
-                <span class="help-block" *ngIf="formErrors.proficiency">
-                  {{formErrors.proficiency}}
-                  </span>
               </div>
-            </div> -->
+            </div>
 
       </div>
       <div class="panel-footer">

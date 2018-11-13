@@ -16,6 +16,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { GetlistComponent } from './getlist/getlist.component';
 import { FooterComponent } from './footer/footer.component';
 import { RevieweligibilityComponent } from './revieweligibility/revieweligibility.component';
+import { RecaptchaModule } from 'ng-recaptcha';
+import { RecaptchaFormsModule } from 'ng-recaptcha/forms';
 import { RdFormComponent } from './RdForm/RdForm.component';
 
 @NgModule({
@@ -38,7 +40,9 @@ import { RdFormComponent } from './RdForm/RdForm.component';
       // BsDatepickerModule.forRoot(),
       BrowserAnimationsModule,
       AppMaterialModule,
-      NgxMaskModule.forRoot()
+      NgxMaskModule.forRoot(),
+      RecaptchaModule,
+      RecaptchaFormsModule
    ],
    providers: [
       EligibilityService

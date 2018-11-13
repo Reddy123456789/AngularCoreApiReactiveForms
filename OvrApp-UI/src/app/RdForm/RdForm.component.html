@@ -1,3 +1,461 @@
 <p>
-  RdForm works!
+  <strong
+    >(<span style="color:#e80000;">*</span>) indicates required field.</strong
+  >
 </p>
+<form >
+<div class="container">
+  <div class="panel panel-default col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <div class="panel-body">
+      <fieldset>
+        <h3>Political Party Preference</h3>
+        <hr style="border-color:black;" />
+        <div>
+          <label class="text-primary" style="color:#3977ad">
+            <b>
+                Florida is a closed primary election state. Any party change made after the registration deadline for an upcoming primary election will not take effect until after that election.
+            </b>
+          </label>
+        </div>
+        <br />
+        <div>
+
+        </div>
+        <div class="form-group row col-lg-12">
+          <br>
+          <div class="col-lg-4 partyAffiliationLabel" style="padding-top: 6px;">
+            <label for="PartyAffiliation">Party Affiliation
+            </label> &nbsp;&nbsp;
+
+          </div>
+          <mat-form-field appearance="outline" >
+            <mat-select placeholder="Select a Party" formControlName="party">
+              <mat-option>-- None --</mat-option>
+              <mat-option *ngFor="let party  of partys" [value]="party">
+                {{ party }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          <div class="col-lg-8">
+          </div>
+        </div>
+        <h3>Legal Residential Address</h3>
+        <hr style="border-color:black;" />
+        <div>
+            <label class="text-primary" style="color:#3977ad">
+                <b>
+                    Do not enter a P.O. Box or business address.
+                </b>
+            </label>
+        </div>
+        <div>
+            <button type="button" class="btn btn-primary btn-lg" id="btnAddressModalShow">
+                <i class="glyphicon glyphicon-home"></i>  Click Here to enter Address
+            </button>
+        </div>
+        <br />
+
+        <div class='row' id="manualAddressEntry">
+            <div class='col-sm-3'>
+                <div class='form-group'>
+
+                    <label for="LegalAddressNumber">StreetNumber <span style="color:#e80000;">*</span></label>
+                    &nbsp;&nbsp;&nbsp;
+                    <input type="text" class="form-control">
+                </div>
+
+            </div>
+            <div class='col-sm-3'>
+                <div class='form-group'>
+
+                    <label for="LegalAddressSuffix">Street Number Suffix</label>
+                    <input type="text" class="form-control">
+                </div>
+
+            </div>
+            <div class='col-sm-3'>
+                <div class='form-group'>
+
+                    <label for="LegalAddressDirection">Pre Direction</label>
+                    <input type="text" class="form-control">
+                </div>
+
+            </div>
+            <div class='col-sm-3'>
+                <div class='form-group'>
+
+                    <label for="LegalAddressStreetName">Street Name <span style="color:#e80000;">*</span></label>
+                    &nbsp;&nbsp;&nbsp;
+                    <input type="text" class="form-control">
+
+                </div>
+
+            </div>
+            <div class='col-sm-3'>
+                <div class='form-group'>
+
+                    <label for="LegalAddressType">Type</label>
+                    <input type="text" class="form-control">
+                </div>
+
+            </div>
+            <div class='col-sm-3'>
+                <div class='form-group'>
+
+                    <label for="LegalAddressDirSuffix">Post Direction</label>
+                    <input type="text" class="form-control">
+                </div>
+
+            </div>
+            <div class='col-sm-3'>
+                <div class='form-group'>
+
+                    <label for="LegalAddressUnitType">Unit Type</label>
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+            <div class='col-sm-3'>
+                <div class='form-group'>
+
+                    <label for="LegalAddressUnitNumber">Unit Number</label>
+                    <input type="text" class="form-control">
+
+                </div>
+
+            </div>
+            <div class='col-sm-3'>
+                <div class='form-group'>
+
+                    <label for="LegalAddressCityName">CityName <span style="color:#e80000;">*</span></label>
+                    &nbsp;&nbsp;&nbsp;
+                    <input type="text" class="form-control">
+                </div>
+
+            </div>
+            <div class='col-sm-3'>
+                <div class='form-group'>
+                    <label for="LegalAddressZipCode">Zip Code <span style="color:#e80000;">*</span></label>
+                    &nbsp;&nbsp;&nbsp;
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+            <div class='col-sm-3'>
+                <div class='form-group'>
+                    <label for="LegalAddressZipCode4">Zip CodePlus4</label>
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+            <div class='col-sm-3'>
+                <div class='form-group'>
+
+                    <label for="LegalAddressCounty">County</label>
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+</div>
+<br />
+<hr style="border-color:black;" />
+<div class='row'>
+    <div class='col-sm-8'>
+        <div class='form-group'>
+            <div style="font-weight:bold">
+                <fieldset>
+                    <legend style="font-size:16px; border-bottom:0px; padding-left:0px; float: left; width:60%; font-weight:bold">Mailing address is same as your residential address.</legend>
+                    <input type="radio">  &nbsp;
+                    <label for="MailingSameAsResidenceYes">
+                        Yes
+                    </label>
+                    &nbsp; &nbsp;
+                    <input type="radio">  &nbsp;
+                    <label for="MailingSameAsResidenceNo">
+                        No
+                    </label>
+
+                </fieldset>
+            </div>
+        </div>
+    </div>
+</div>
+<br />
+<div class="form-group" id="MailAddress">
+    <h3> Mailing Address</h3>
+    <h5>(This information is not required.)</h5>
+    <hr style="border-color:black;" />
+    <div class='row'>
+        <div class='col-sm-4'>
+            <div class='form-group'>
+
+                <label for="MAddressLine1">Address Line 1</label>
+                <input type="text" class="form-control">
+            </div>
+        </div>
+        <div class='col-sm-4'>
+            <div class='form-group'>
+
+                <label for="MAddressLine2">Address Line 2</label>
+                <input type="text" class="form-control">
+            </div>
+        </div>
+        <div class='col-sm-4'>
+            <div class='form-group'>
+
+                <label for="MAddressLine3">Address Line 3</label>
+                <input type="text" class="form-control">
+            </div>
+        </div>
+        <div class='col-sm-4'>
+            <div class='form-group'>
+
+                <label for="MailingCity">City</label>
+                <input type="text" class="form-control">
+            </div>
+        </div>
+        <div class='col-sm-4'>
+            <div class='form-group'>
+
+                <label for="MailingState">State</label>
+                <input type="text" class="form-control">
+
+            </div>
+        </div>
+        <div class='col-sm-4'>
+            <div class='form-group'>
+
+                <label for="MailingZipCode">Zip Code</label>
+                <input type="text" class="form-control">
+            </div>
+        </div>
+        <div class='col-sm-4'>
+            <div class='form-group'>
+
+                <label for="MCountryOutsideUS">Country if outside US</label>
+                <input type="text" class="form-control">
+            </div>
+        </div>
+    </div>
+</div>
+<h3>Former Name and Former Address Where You Were Last Registered to Vote</h3>
+                <h5>(This information is not required.)</h5>
+                <hr style="border-color:black;" />
+                <div class='row'>
+                    <div class='col-sm-4'>
+                        <div class='form-group'>
+
+                            <label for="FAddressLine1">Address Line 1</label>
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class='col-sm-4'>
+                        <div class='form-group'>
+
+                            <label for="FAddressLine2">Address Line 2</label>
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class='col-sm-4'>
+                        <div class='form-group'>
+
+                            <label for="FAddressLine3">Address Line 3</label>
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class='col-sm-4'>
+                        <div class='form-group'>
+
+                            <label for="FormerCity">City</label>
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class='col-sm-4'>
+                        <div class='form-group'>
+
+                            <label for="FormerState">State</label>
+
+                            <input type="text" class="form-control">
+
+                        </div>
+                    </div>
+
+
+                    <div class='col-sm-4'>
+                        <div class='form-group'>
+
+                            <label for="FormerZipCode">Zip Code</label>
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class='col-sm-4'>
+                        <div class='form-group'>
+
+                            <label for="FormerFirstName">Former First Name</label>
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class='col-sm-4'>
+                        <div class='form-group'>
+
+                            <label for="FormerMiddleName">Former Middle Name</label>
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class='col-sm-4'>
+                        <div class='form-group'>
+
+                            <label for="FormerLastName">Former Last Name</label>
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                </div>
+
+                <br />
+                <h3>Personal Information</h3>
+                <h5>(This information is not required.)</h5>
+                <hr style="border-color:black;" />
+                <label class="text-primary" style="color:#3977ad">
+                    <span style="color:#e80000;">Public Records Notice:</span> <u>
+                      <a href="http://dos.myflorida.com/elections/for-voters/voter-registration/voter-information-as-a-public-record/" target="_blank" class="a_hover"
+                       title="Voter information as a public Record"> Voter Information as a Public Record</a></u><span>.</span>
+                </label>
+
+                <br /><br />
+                <div class='row'>
+                    <div class='col-sm-4'>
+                        <div class='form-group'>
+
+                            <label> Gender </label><br/>
+                            <input type="radio">&nbsp; <label for="Male"> Male</label> &nbsp;
+                            <input type="radio">&nbsp; <label for="Female"> Female</label>
+
+                        </div>
+                    </div>
+                    <div class='col-sm-4'>
+                        <div class='form-group'>
+                            <label for="Race">Race/Ethnicity</label>
+
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class='col-sm-4'>
+                            <div class='form-group'>
+
+                                <label for="Phone">Telephone Number</label>
+                                <input type="text" class="form-control">
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class='col-sm-4'>
+                                <div class='form-group'>
+                                    <br />
+                                    <label> <input type="checkbox">  <b> Email me SAMPLE BALLOTS if option is available in my county.</b></label>
+                                </div>
+                            </div>
+                            <div class="form-group"  id="dvEmail">
+                                <div class='col-sm-4'>
+                                    <div class='form-group'>
+
+                                        <label for="Email">Email</label>
+                                        <input type="text" class="form-control">
+
+                                    </div>
+                                </div>
+                                <div class='col-sm-4'>
+                                    <div class='form-group'>
+                                        <label for="ConfirmEmail">Confirm Email Address</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class='col-sm-4'>
+                        <div class='form-group'>
+
+                            <label for="PlaceOfBirth"> State or Country of Birth</label>
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+
+                </div>
+
+                <br />
+                <h3> Assistance/Volunteer Services</h3>
+                <h5>(This information is not required.)</h5>
+                <hr style="border-color:black;" />
+
+                <div class="form-group">
+                    <div class="col-lg-12">
+
+                        <br />
+                        <div style="font-weight:bold">
+                            <fieldset>
+                                <legend style="font-size:14px; border-bottom:0px; padding-left:0px; float: left; width:30%">I will need assistance with voting.</legend>
+                                <input type="radio">
+                                <label for="VotingAssistRequiredYes">
+                                    Yes
+                                </label>
+
+                                <input type="radio">
+                                <label for="VotingAssistRequiredNo">
+                                    No
+                                </label>
+                            </fieldset>
+                        </div>
+
+                        <div style="font-weight:bold">
+                            <fieldset>
+                                <legend style="font-size:14px; border-bottom:0px; padding-left:0px; float: left; width:30%">I am interested in becoming a poll worker.</legend>
+                                <input type="radio">
+                                <label for="PoolWorkerVolunteerYes">
+                                    Yes
+                                </label>
+
+                                <input type="radio">
+                                <label for="PoolWorkerVolunteerNo">
+                                    No
+                                </label>
+                            </fieldset>
+                        </div>
+
+                        <br /><br />
+                        <h3> Classification</h3>
+                        <h5>(This information is not required.)</h5>
+
+                        <hr style="border-color:black;" />
+                        <br />
+                        <fieldset>
+                            <legend class="text-primary" style="color:#3977ad; font-size:14px; border-bottom:0px;">
+                                I am one of the following:
+                            </legend>
+
+                            <input type="radio"> &nbsp;
+                            <label for="Classification1">
+                                I am an active duty Uniformed Services or Merchant Marine member.
+                            </label><br>
+                            <input type="radio"> &nbsp;
+                            <label for="Classification2">
+                                I am a spouse or a dependent of an active duty Uniformed Services or Merchant Marine member.
+                            </label><br>
+                            <input type="radio"> &nbsp;
+                            <label for="Classification3">
+                                I am a U.S. citizen residing outside the U.S.
+                            </label><br>
+                            <label>
+                                <input type="radio">  &nbsp;None of the above.
+                            </label><br>
+                        </fieldset>
+                    </div>
+
+                </div>
+      </fieldset>
+    </div>
+  </div>
+</div>
+
+</form>
